@@ -1,0 +1,11 @@
+syntax = "proto3";
+package gateway_5;
+option go_package = "gateway_5/";
+
+message StringMessage {
+  string value = 1;
+}
+
+service YourService {
+  rpc Echo(StringMessage) returns (StringMessage) {}
+}
